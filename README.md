@@ -11,13 +11,13 @@ A most convenient place to book your ride.
 
 call base url like
 
-http://localhost or  http://127.0.0.1:8000
+http://localhost/api or  http://127.0.0.1:8000/api
 
 ### Check rides
 
 To call api use base url with endpoint
 
-Complete url with endpoint: http://localhost/booking
+Complete url with endpoint: http://localhost/api/booking
 
 It also takes 2 arguments 'from' and 'to' with endpoint
 
@@ -31,19 +31,19 @@ then from will be ludhiana and to will be chandigarh
 
 The complete url will be like
 
-http://localhost/booking?from=ludhiana&to=chandigarh
+http://localhost/api/booking?from=ludhiana&to=chandigarh
 
 ### See past booking
 
 To call api use base url with endpoint
 
-Complete url with endpoint: http://localhost/booking
+Complete url with endpoint: http://localhost/api/booking
 
 Example:
 
 The complete url will be like
 
-http://localhost/booking
+http://localhost/api/booking
 
 It will return all booking of past in json format
 
@@ -51,12 +51,12 @@ It will return all booking of past in json format
 
 To call api use base url with endpoint
 
-Complete url with endpoint: http://localhost/cabsnearby
+Complete url with endpoint: http://localhost/api/cabsnearby
 
 Example:
 
 The complete url will be like
 
-http://localhost/booking/cabsnearby
+http://localhost/api/cabsnearby
 
 It will return all cabs locations nearby you in json format
