@@ -1,19 +1,19 @@
-# CabsRide
-A most conveitn place to book your ride.
+# CabRide
+A most convenient place to book your ride.
 
 ## API Features
 
-* 1) Check rides for locations A to B with fiar.
-* 2) See all past bookings.
-* 3) See all locations nearby you.
+1) Check rides for locations A to B with fiar.
+2) See all past bookings.
+3) See all locations nearby you.
 
-### How to use API
+## How to use API
 
 call base url like
 
 http://localhost or  http://127.0.0.1:8000
 
-#### Check rides
+### Check rides
 
 To call api use base url with endpoint
 
@@ -33,7 +33,7 @@ The complete url will be like
 
 http://localhost/booking?from=ludhiana&to=chandigarh
 
-#### See past booking
+### See past booking
 
 To call api use base url with endpoint
 
@@ -47,7 +47,7 @@ http://localhost/booking
 
 It will return all booking of past in json format
 
-#### See cabs nearby
+### See cabs nearby
 
 To call api use base url with endpoint
 
