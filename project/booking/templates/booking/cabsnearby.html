@@ -1,0 +1,9 @@
+{% extends 'booking/base.html' %}
+{% block content %}
+
+<h1 class="title pt50">Near By Locations</h1>
+{% for nearby_location in nearby_locations %}
+    <p class="p10">{{ nearby_location }}</p>
+{% endfor %}
+
+{% endblock content %}

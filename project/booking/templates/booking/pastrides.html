@@ -1,0 +1,86 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+    <h1 class="is-size-4 pt50">Past Booked Rides:</h1>
+    <div class="past-rides">
+        <div class="columns has-background-info has-text-white">
+            <div class="column">
+                <p>No.</p>
+            </div>
+            <div class="column">
+                <p>Leaving from</p>
+            </div>
+            <div class="column">
+                <p>Going to</p>
+            </div>
+            <div class="column">
+                <p>Total Distance</p>
+            </div>
+            <div class="column">
+                <p>Ride Fair</p>
+            </div>
+            <div class="column">
+                <p>Cabs Driver Name</p>
+            </div>
+            <div class="column">
+                <p>Booked Date</p>
+            </div>
+        </div>
+    </div>
+    <div  class="past-rides">
+        {% for past_ride in past_rides%}
+            {% if forloop.counter0|divisibleby:2 == 0 %}
+                <div class="columns">
+                    <div class="column">
+                        <p>{{ forloop.counter }}</p>
+                    </div>
+                    <div class="column has-background-info has-light has-text-white">
+                        <p>{{ past_ride.leaving_from }}</p>
+                    </div>
+                    <div class="column">
+                        <p>{{ past_ride.going_to }}</p>
+                    </div>
+                    <div class="column has-background-info is-light has-text-white">
+                        <p>{{ past_ride.total_distance }}</p>
+                    </div>
+                    <div class="column">
+                        <p>{{ past_ride.ride_fair }}</p>
+                    </div>
+                    <div class="column has-background-info is-light has-text-white">
+                        <p>{{ past_ride.cabs_driver }}</p>
+                    </div>
+                    <div class="column">
+                        <p>{{ past_ride.ride_booked_date|date:"d M, Y" }}</p>
+                    </div>
+                </div>
+            {% else %}
+                <div class="columns">
+                    <div class="column has-background-info has-text-white">
+                        <p>{{ forloop.counter }}</p>
+                    </div>
+                    <div class="column">
+                        <p>{{ past_ride.leaving_from }}</p>
+                    </div>
+                    <div class="column has-background-info has-text-white">
+                        <p>{{ past_ride.going_to }}</p>
+                    </div>
+                    <div class="column">
+                        <p>{{ past_ride.total_distance }}</p>
+                    </div>
+                    <div class="column has-background-info has-text-white">
+                        <p>{{ past_ride.ride_fair }}</p>
+                    </div>
+                    <div class="column">
+                        <p>{{ past_ride.cabs_driver }}</p>
+                    </div>
+                    <div class="column has-background-info has-text-white">
+                        <p>{{ past_ride.ride_booked_date|date:"d M, Y" }}</p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <br>
+    <br>
+    <br>
+{% endblock content %}
