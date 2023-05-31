@@ -1,0 +1,16 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: app
+    container_name: app
+    image: app:latest
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
