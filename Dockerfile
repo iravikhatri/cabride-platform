@@ -1,7 +1,7 @@
 # Dockerfile
 
 # pull the official docker image
-FROM python:3.9
+FROM python:3.11
 
 # set work directory
 WORKDIR /app
@@ -21,4 +21,4 @@ COPY . /app/
 EXPOSE 8000
 
 # runing command
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["gunicorn",  "--bind", "0.0.0.0:8000", "project.wsgi:application"]
