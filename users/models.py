@@ -3,14 +3,8 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from common.constants import USER_TYPE_CHOICES
 from users.managers import UserManager
-
-
-# User related models
-USER_TYPE_CHOICES = [
-    ('passenger', 'Passenger'),
-    ('driver', 'Driver')
-]
 
 
 class User(AbstractUser):

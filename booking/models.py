@@ -2,23 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-
-#  status - created, pending, confirmed, completed, canceled
-STATUS_CHOICES = [
-    ("created" , "Created"),
-    ("pending" , "Pending"),
-    ("confirmed" , "Confirmed"),
-    ("completed" , "Completed"),
-    ("canceled" , "Canceled"),
-]
-
-# class type - economy, sedan, SUV, luxury
-CLASS_TYPE_CHOICES = [
-    ("economy" , "Economy"),
-    ("sedan" , "Sedan"),
-    ("suv" , "SUV"),
-    ("luxury" , "Luxury"),
-]
+from common.constants import CLASS_TYPE_CHOICES, STATUS_CHOICES
 
 
 class Bookings(models.Model):
@@ -26,14 +10,14 @@ class Bookings(models.Model):
     driver = models.ForeignKey(User, on_delete=models.CASCADE)
     passenger = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    numebr_of_passenger = models.IntegerField(default=1)
-    scheduled_date = models.DateTimeField()
+    number_of_passenger = models.IntegerField(default=1)
+    scheduled_at = models.DateTimeField()
     status = models.CharField(choices=STATUS_CHOICES, default=STATUS_CHOICES[0][0])
     class_type = models.CharField(choices=CLASS_TYPE_CHOICES, default=CLASS_TYPE_CHOICES[0][0])
     additional_comment = models.TextField()
 
     pickup_location = models.CharField(max_length=150)
-    drop_location = models.CharField(max_length=150)
+    drop_off_location = models.CharField(max_length=150)
     estimated_fair = models.FloatField()
     final_fair = models.FloatField()
     estimated_distance = models.FloatField()
