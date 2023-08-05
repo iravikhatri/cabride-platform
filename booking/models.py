@@ -7,13 +7,13 @@ from common.constants import CLASS_TYPE_CHOICES, STATUS_CHOICES
 
 class Bookings(models.Model):
 
-    driver = models.ForeignKey(User, on_delete=models.CASCADE)
-    passenger = models.ForeignKey(User, on_delete=models.CASCADE)
+    driver = models.ForeignKey(User, related_name="driver", on_delete=models.CASCADE)
+    passenger = models.ForeignKey(User, related_name="passenger", on_delete=models.CASCADE)
 
     number_of_passenger = models.IntegerField(default=1)
     scheduled_at = models.DateTimeField()
-    status = models.CharField(choices=STATUS_CHOICES, default=STATUS_CHOICES[0][0])
-    class_type = models.CharField(choices=CLASS_TYPE_CHOICES, default=CLASS_TYPE_CHOICES[0][0])
+    status = models.CharField(max_length=32, choices=STATUS_CHOICES, default=STATUS_CHOICES[0][0])
+    class_type = models.CharField(max_length=32, choices=CLASS_TYPE_CHOICES, default=CLASS_TYPE_CHOICES[0][0])
     additional_comment = models.TextField()
 
     pickup_location = models.CharField(max_length=150)

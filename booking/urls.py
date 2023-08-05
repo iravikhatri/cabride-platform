@@ -1,7 +1,7 @@
 from django.urls import path, include
-from booking.views import BookingsApiView, NearByCabsApiView
+from .views import BookingCreateAPIView
 
 urlpatterns = [
-    path('', BookingsApiView().as_view()),
-    path('/<int:pk>', NearByCabsApiView().as_view()),
+    path('', BookingCreateAPIView().as_view()),
+    # path('/<int:pk>', BookingCreateAPIView().as_view()),
 ]
