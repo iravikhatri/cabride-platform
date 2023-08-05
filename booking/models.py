@@ -5,7 +5,7 @@ from django.utils import timezone
 from common.constants import CLASS_TYPE_CHOICES, STATUS_CHOICES
 
 
-class Bookings(models.Model):
+class Booking(models.Model):
 
     driver = models.ForeignKey(User, related_name="driver", on_delete=models.CASCADE)
     passenger = models.ForeignKey(User, related_name="passenger", on_delete=models.CASCADE)

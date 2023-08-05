@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from booking.serializers import BookingSerializer
-from booking.models import Bookings
+from booking.models import Booking
 
 
 class BookingCreateAPIView(APIView):
@@ -10,7 +10,7 @@ class BookingCreateAPIView(APIView):
     serializers_class = BookingSerializer
 
     def get(self, request):
-        bookings = Bookings.objects.all()
+        bookings = Booking.objects.all()
         serializer = self.serializers_class(bookings, many=True)
         data = serializer.data
 
