@@ -1,4 +1,5 @@
 {% extends 'booking/base.html' %}
+
 {% block content %}
 <div class="pt50">
     <h1 class="is-size-2 title m0">
@@ -55,10 +56,10 @@
         <div class="booking-showcard booking-showcard-extra" id="booking_record_{{forloop.counter}}">
             <div class="columns">
                 <div class="column">
-                    <p id="leaving_from_{{forloop.counter}}" class="p5">{{ available_ride.leaving_from }}</p>
+                    <p id="leaving_from_{{forloop.counter}}" class="p5">{{ available_ride.pickup }}</p>
                 </div>
                 <div class="column">
-                    <p id="going_to_{{forloop.counter}}" class="p5">{{ available_ride.going_to }}</p>
+                    <p id="going_to_{{forloop.counter}}" class="p5">{{ available_ride.drop }}</p>
                 </div>
                 <div class="column">
                     <p id="total_distance_{{forloop.counter}}" class="p5">{{ available_ride.total_distance }} Km</p>

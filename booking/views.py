@@ -2,19 +2,20 @@ from django.shortcuts import render, redirect
 from .models import Bookings
 from .forms import CabRideSearch
 
+
 def home(request):
     context = {}
     if request.method == "POST":
         form = CabRideSearch(request.POST)
         if form.is_valid():
-            search_leaving_from = form.cleaned_data.get('search_leaving_from')
-            search_going_to = form.cleaned_data.get('search_going_to')
+            search_pickup = form.cleaned_data.get('search_pickup')
+            search_drop = form.cleaned_data.get('search_drop')
             available_rides = [
-                { 'leaving_from': search_leaving_from, 'going_to': search_going_to, 'total_distance': 100.3, 'ride_fair': 200, 'cabs_driver': 'Jaspreet Singh' },
-                { 'leaving_from': search_leaving_from, 'going_to': search_going_to, 'total_distance': 100.3, 'ride_fair': 250, 'cabs_driver': 'Nivin Aggarwal' },
-                { 'leaving_from': search_leaving_from, 'going_to': search_going_to, 'total_distance': 100.3, 'ride_fair': 230, 'cabs_driver': 'JP Kolhi' },
-                { 'leaving_from': search_leaving_from, 'going_to': search_going_to, 'total_distance': 100.3, 'ride_fair': 300, 'cabs_driver': 'Balvinder Singh' },
-                { 'leaving_from': search_leaving_from, 'going_to': search_going_to, 'total_distance': 100.3, 'ride_fair': 280, 'cabs_driver': 'Arun Verma' },
+                { 'pickup': search_pickup, 'drop': search_drop, 'total_distance': 100.3, 'ride_fair': 200, 'cabs_driver': 'Jaspreet Singh' },
+                { 'pickup': search_pickup, 'drop': search_drop, 'total_distance': 100.3, 'ride_fair': 250, 'cabs_driver': 'Nivin Aggarwal' },
+                { 'pickup': search_pickup, 'drop': search_drop, 'total_distance': 100.3, 'ride_fair': 230, 'cabs_driver': 'JP Kolhi' },
+                { 'pickup': search_pickup, 'drop': search_drop, 'total_distance': 100.3, 'ride_fair': 300, 'cabs_driver': 'Balvinder Singh' },
+                { 'pickup': search_pickup, 'drop': search_drop, 'total_distance': 100.3, 'ride_fair': 280, 'cabs_driver': 'Arun Verma' },
             ]
             form = CabRideSearch()
             context.update({
@@ -27,6 +28,7 @@ def home(request):
             'form': form
         })
     return render(request, 'booking/home.html', context)
+
 
 def create_booking(request):
     if request.method == "POST":
@@ -41,11 +43,13 @@ def create_booking(request):
         booking.save()
     return redirect('booking-cabs_nearby')
 
+
 def past_rides(request):
     context = {
         "past_rides": Bookings.objects.all()
     }
     return render(request, 'booking/pastrides.html', context)
+
 
 def cabs_nearby(request):
     context = {
