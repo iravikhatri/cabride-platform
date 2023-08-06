@@ -2,9 +2,9 @@
 function RideCard({ data }) {
     return (
         <div className="mt-6 py-10 px-10 flex justify-between items-center bg-white">
-            <div className="flex flex-col justify-center items-center">
-                <div className="w-12 h-12 bg-primary"></div>
-                <p className="text-black">{data.driver.name}</p>
+            <div className="w-24 flex flex-col justify-center items-center">
+                <img className="w-12 h-12 mb-2 object-cover rounded-full" src={data.driver.image} alt={data.driver.name} />
+                <p className="text-sm">{data.driver.name}</p>
             </div>
             <div className="flex">
                 <div>
@@ -30,7 +30,7 @@ function RideCard({ data }) {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center gap-y-2">
-                <p className="text-3xl font-medium">{data.fair_amount}</p>
+                <p className="text-3xl font-medium">₹{data.fair_amount}</p>
                 <button className="px-10 py-3 bg-primary rounded-xl text-white">
                     Book Now
                 </button>

@@ -6,7 +6,7 @@ const data = [
     {
         driver: {
             name: "Amritpal Singh",
-            image: ""
+            image: "https://machohairstyles.com/wp-content/uploads/2020/12/buzz-cut-for-men-with-square-face-shape-1536x1159.jpg.webp"
         },
         drop: {
             datetime: "",
@@ -21,8 +21,8 @@ const data = [
     },
     {
         driver: {
-            name: "Amritpal Singh",
-            image: ""
+            name: "Raja Ram",
+            image: "https://machohairstyles.com/wp-content/uploads/2020/12/buzz-cut-for-men-with-square-face-shape-1536x1159.jpg.webp"
         },
         drop: {
             datetime: "",
@@ -33,12 +33,12 @@ const data = [
             city: "Noida, Uttar Pradesh, India"
         },
         distance: "120 KM",
-        fair_amount: 1200.00
+        fair_amount: 1100.00
     },
     {
         driver: {
-            name: "Amritpal Singh",
-            image: ""
+            name: "Monty Kakkad",
+            image: "https://machohairstyles.com/wp-content/uploads/2020/12/buzz-cut-for-men-with-square-face-shape-1536x1159.jpg.webp"
         },
         drop: {
             datetime: "",
@@ -49,12 +49,12 @@ const data = [
             city: "Noida, Uttar Pradesh, India"
         },
         distance: "120 KM",
-        fair_amount: 1200.00
+        fair_amount: 1250.00
     },
     {
         driver: {
-            name: "Amritpal Singh",
-            image: ""
+            name: "Jacky Sodhi",
+            image: "https://machohairstyles.com/wp-content/uploads/2020/12/buzz-cut-for-men-with-square-face-shape-1536x1159.jpg.webp"
         },
         drop: {
             datetime: "",
@@ -65,7 +65,7 @@ const data = [
             city: "Noida, Uttar Pradesh, India"
         },
         distance: "120 KM",
-        fair_amount: 1200.00
+        fair_amount: 1300.00
     },
 ]
 
