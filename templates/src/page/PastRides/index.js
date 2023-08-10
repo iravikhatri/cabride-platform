@@ -94,12 +94,12 @@ function PastRides() {
         <>
             <Header />
             <div className="xl:container mx-auto">
-                <table className="w-full mt-6 border-separate border-spacing-y-2">
+                <table className="w-full mt-6 border-separate border-spacing-y-3">
                     <thead className="sticky top-24 rounded-2xl">
                         <tr className="bg-beta text-white text-left">
                             {titles.map(item => {
                                 return (
-                                    <th key={item.id} className="p-4">{item.title}</th>
+                                    <th key={item.id} className="p-5">{item.title}</th>
                                 )
                             })}
                         </tr>
@@ -108,13 +108,13 @@ function PastRides() {
                         {data.map(item => {
                             return (
                                 <tr key={item.ride_id} className="bg-white text-black rounded-xl">
-                                    <td className="p-4">{item.ride_id}</td>
-                                    <td className="p-4">{item.schedule_at}</td>
-                                    <td className="p-4">{item.driver}</td>
-                                    <td className="p-4">{item.pickup}</td>
-                                    <td className="p-4">{item.drop}</td>
-                                    <td className="p-4">₹{item.paid_amount}</td>
-                                    <td className="p-4">{item.actions}</td>
+                                    <td className="p-5">{item.ride_id}</td>
+                                    <td className="p-5">{item.schedule_at}</td>
+                                    <td className="p-5">{item.driver}</td>
+                                    <td className="p-5">{item.pickup}</td>
+                                    <td className="p-5">{item.drop}</td>
+                                    <td className="p-5">₹{item.paid_amount}</td>
+                                    <td className="p-5">{item.actions}</td>
                                 </tr>
                             )
                         })}
