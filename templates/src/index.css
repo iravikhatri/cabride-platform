@@ -1,14 +1,11 @@
-* {
-    font-family: 'Outfit', sans-serif;
-}
-
 body {
     background-color: #F7FAFF;
+    font-family: 'Outfit', sans-serif;
 }
 
 .active {
     @apply py-3 px-4 text-alpha;
-  }
+}
 
 @tailwind base;
 @tailwind components;

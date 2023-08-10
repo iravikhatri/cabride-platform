@@ -95,16 +95,17 @@ function PastRides() {
             <Header />
             <div className="xl:container mx-auto">
                 <table className="w-full mt-6 border-separate border-spacing-y-2">
-                    <thead className="sticky top-24">
+                    <thead className="sticky top-24 rounded-2xl">
                         <tr className="bg-beta text-white text-left">
-                            {titles.map(item =>(
-                                <th key={item.id} className="p-4">{item.title}</th>
-                            ))}
+                            {titles.map(item => {
+                                return (
+                                    <th key={item.id} className="p-4">{item.title}</th>
+                                )
+                            })}
                         </tr>
                     </thead>
                     <tbody>
                         {data.map(item => {
-                            console.log(item);
                             return (
                                 <tr key={item.ride_id} className="bg-white text-black rounded-xl">
                                     <td className="p-4">{item.ride_id}</td>
