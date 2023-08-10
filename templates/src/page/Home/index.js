@@ -72,8 +72,10 @@ const data = [
 function Home() {
     return (
         <div>
-            <Header />
-            <SearchPanal />
+            <div className="sticky top-0">
+                <Header />
+                <SearchPanal />
+            </div>
             <div className="xl:container mx-auto">
                 {data?.map(item => (
                     <RideCard data={item} />

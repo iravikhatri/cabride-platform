@@ -6,6 +6,10 @@ body {
     background-color: #F7FAFF;
 }
 
+.active {
+    @apply py-3 px-4 text-alpha;
+  }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

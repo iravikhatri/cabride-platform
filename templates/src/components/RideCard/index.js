@@ -15,7 +15,9 @@ function RideCard({ data }) {
                 <div className="mx-14 flex flex-col justify-center text-center">
                     <p>{data.distance}</p>
                     <div className="flex items-center">
-                        <div className="h-6 w-6 bg-primary rounded-full"></div>
+                        <div className="h-6 w-6 flex justify-center items-center bg-alpha rounded-full">
+                            <div className="h-3 w-3 bg-primary rounded-full"></div>
+                        </div>
                         <div className="h-0 w-80 border-b border-off-gray"></div>
                         <div className="h-6 w-6 flex justify-center items-center bg-alpha rounded-full">
                             <div className="h-3 w-3 bg-primary rounded-full"></div>

@@ -3,7 +3,7 @@ import InputField from '../../elements/InputField'
 
 function SearchPanal() {
     return (
-        <div className="sticky top-14 bg-secondary text-white">
+        <div className="bg-secondary text-white">
             <div className="xl:container mx-auto py-6">
                 <div className="pt-12 pb-10 font-light text-3xl">
                     <h2>Welcome to the cabride,</h2>
